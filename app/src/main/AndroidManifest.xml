@@ -12,6 +12,7 @@
         android:screenOrientation="portrait">
         <activity
             android:name=".MainActivity"
+            android:theme="@style/Theme.Pomoshleizer.NoActionBar"
             android:exported="true">
 
             <intent-filter>
