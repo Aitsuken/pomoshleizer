@@ -1,4 +1,4 @@
-package jp.dorakura.pomoshleizer
+package jp.dorakura.myapplication
 
 import org.junit.Test
 

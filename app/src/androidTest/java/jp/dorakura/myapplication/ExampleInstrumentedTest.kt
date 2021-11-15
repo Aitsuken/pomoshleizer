@@ -1,4 +1,4 @@
-package jp.dorakura.pomoshleizer
+package jp.dorakura.myapplication
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("jp.dorakura.pomoshleizer", appContext.packageName)
+        assertEquals("jp.dorakura.myapplication", appContext.packageName)
     }
 }
