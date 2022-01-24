@@ -7,24 +7,24 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="jp.dorakura.myapplication.ui.home.HomeFragment"
+        android:name="jp.dorakura.myapplication.ui.focus.PomodoroFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_pomodoro" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="jp.dorakura.myapplication.ui.gallery.GalleryFragment"
+        android:id="@+id/nav_todo"
+        android:name="jp.dorakura.myapplication.ui.todo.ToDoFragment"
         android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_todo" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="jp.dorakura.myapplication.ui.slideshow.SlideshowFragment"
+        android:id="@+id/nav_motivation"
+        android:name="jp.dorakura.myapplication.ui.motivation.MotivationFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
     <fragment
-        android:id="@+id/nav_settings"
-        android:name="jp.dorakura.myapplication.ui.settings.SettingsFragment"
+        android:id="@+id/nav_about"
+        android:name="jp.dorakura.myapplication.ui.about.AboutFragment"
         android:label="@string/menu_settings"
-        tools:layout="@layout/fragment_settings" />
+        tools:layout="@layout/fragment_about" />
 </navigation>

@@ -1,13 +1,13 @@
-package jp.dorakura.myapplication.ui.home
+package jp.dorakura.myapplication.ui.motivation
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class HomeViewModel : ViewModel() {
+class MotivationViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is home Fragment Enjoy Yorself"
+        value = "This is slideshow Fragment"
     }
     val text: LiveData<String> = _text
 }

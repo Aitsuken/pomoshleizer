@@ -1,13 +1,13 @@
-package jp.dorakura.myapplication.ui.slideshow
+package jp.dorakura.myapplication.ui.focus
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class SlideshowViewModel : ViewModel() {
+class HomeViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is slideshow Fragment"
+        value = "This is home Fragment Enjoy Yorself"
     }
     val text: LiveData<String> = _text
 }
