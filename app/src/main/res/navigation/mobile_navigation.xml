@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/nav_focus">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="jp.dorakura.myapplication.ui.focus.PomodoroFragment"
+        android:id="@+id/nav_focus"
+        android:name="jp.dorakura.myapplication.ui.focus.FocusFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_pomodoro" />
+        tools:layout="@layout/fragment_focus" />
 
     <fragment
         android:id="@+id/nav_todo"
@@ -21,7 +21,7 @@
         android:id="@+id/nav_motivation"
         android:name="jp.dorakura.myapplication.ui.motivation.MotivationFragment"
         android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_motivation" />
     <fragment
         android:id="@+id/nav_about"
         android:name="jp.dorakura.myapplication.ui.about.AboutFragment"

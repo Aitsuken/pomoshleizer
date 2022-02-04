@@ -8,12 +8,13 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import jp.dorakura.myapplication.databinding.FragmentPomodoroBinding
+import com.google.android.material.button.MaterialButton
+import jp.dorakura.myapplication.databinding.FragmentFocusBinding
 
-class PomodoroFragment : Fragment() {
+class FocusFragment : Fragment() {
 
-    private lateinit var homeViewModel: HomeViewModel
-    private var _binding: FragmentPomodoroBinding? = null
+    private lateinit var focusViewModel: FocusViewModel
+    private var _binding: FragmentFocusBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -24,15 +25,17 @@ class PomodoroFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
-
-        _binding = FragmentPomodoroBinding.inflate(inflater, container, false)
+        focusViewModel =
+            ViewModelProvider(this).get(FocusViewModel::class.java)
+        _binding = FragmentFocusBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val textView: TextView = binding.textPomodoro
-        homeViewModel.text.observe(viewLifecycleOwner, Observer {
+        val materialButton: MaterialButton = binding.TimerButton
+
+        focusViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
+            materialButton.text=it
         })
         return root
     }

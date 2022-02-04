@@ -4,19 +4,19 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import jp.dorakura.myapplication.R
 import jp.dorakura.myapplication.databinding.FragmentTodoBinding
 
 class ToDoFragment : Fragment() {
 
-    private lateinit var galleryViewModel: ToDoViewModel
+    private lateinit var todoAdapter: ToDoBE
     private var _binding: FragmentTodoBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -24,16 +24,26 @@ class ToDoFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        galleryViewModel =
-            ViewModelProvider(this).get(ToDoViewModel::class.java)
+        todoAdapter = ToDoBE(mutableListOf())
+        binding.viewTodoList.adapter = todoAdapter
+
+        val layoutManager = LinearLayoutManager(activity)
+        (binding.viewTodoList).layoutManager = layoutManager
+
+        binding.addTodo.setOnClickListener{
+            val todoTitle = binding.etTodoTitle.text.toString()
+            if(todoTitle.isNotEmpty()){
+                val todo = ToDoList(todoTitle)
+                todoAdapter.addTask(todo)
+                binding.etTodoTitle.text.clear()
+            }
+        }
+        binding.deleteTodo.setOnClickListener{
+            todoAdapter.deleteDone()
+        }
 
         _binding = FragmentTodoBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-
-/*        val textView: TextView = binding.textGallery
-        galleryViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })*/
+        val root: View = inflater.inflate(R.layout.fragment_todo, container, false)
         return root
     }
 

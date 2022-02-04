@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 class MotivationViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is slideshow Fragment"
+        value = "I like cakes"
     }
     val text: LiveData<String> = _text
 }
