@@ -12,7 +12,7 @@ import jp.dorakura.myapplication.ui.todo.ToDoList
 
 
 class ToDoBE(
-    
+
     private val todoitems: MutableList<ToDoList>
 ) : RecyclerView.Adapter<ToDoBE.todoViewHolder>() {
 
@@ -27,29 +27,30 @@ class ToDoBE(
     }
 
 
-    fun addTask(todo: ToDoList){
+    fun addTask(todo: ToDoList) {
         todoitems.add(todo)
-        notifyItemInserted(todoitems.size-1)
+        notifyItemInserted(todoitems.size - 1)
     }
 
-    fun deleteDone(){
-        todoitems.removeAll{
-            todo -> todo.isDone
+    fun deleteDone() {
+        todoitems.removeAll { todo ->
+            todo.isDone
         }
         notifyDataSetChanged()
     }
+
     private fun toggleStrikeThrough(textView: TextView, isChecked: Boolean) {
-        if(isChecked){
+        if (isChecked) {
             textView.paintFlags = textView.paintFlags or STRIKE_THRU_TEXT_FLAG
 
-        }else{
+        } else {
             textView.paintFlags = textView.paintFlags and STRIKE_THRU_TEXT_FLAG.inv()
         }
     }
 
     override fun onBindViewHolder(holder: todoViewHolder, position: Int) {
         val currentTask = todoitems[position]
-        holder.itemView.apply{
+        holder.itemView.apply {
 
             val textView: TextView = findViewById(R.id.taskTitle)
             textView.text = currentTask.name

@@ -3,7 +3,8 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Pomoshleizer Focus</string>
-    //<string name="nav_header_subtitle">android.studio@android.com</string>
+    //
+    <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
@@ -14,5 +15,6 @@
     <string name="the_description">Pomoshleizer is an android app based on kotlin
         that will help you to focus on productivity
         by using pomodoro technique. You can use long and short breaks to increase your productivity.
-        Keep working and everything can be accomplished!</string>
+        Keep working and everything can be accomplished!
+    </string>
 </resources>

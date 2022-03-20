@@ -11,7 +11,6 @@ import jp.dorakura.myapplication.R
 class AboutFragment : Fragment() {
 
 
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -19,5 +18,5 @@ class AboutFragment : Fragment() {
     ): View? {
         val root: View = inflater.inflate(R.layout.fragment_about, container, false)
         return root
-        }
     }
+}

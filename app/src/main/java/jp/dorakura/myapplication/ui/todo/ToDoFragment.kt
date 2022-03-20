@@ -30,15 +30,15 @@ class ToDoFragment : Fragment() {
         val layoutManager = LinearLayoutManager(activity)
         (binding.viewTodoList).layoutManager = layoutManager
 
-        binding.addTodo.setOnClickListener{
+        binding.addTodo.setOnClickListener {
             val todoTitle = binding.etTodoTitle.text.toString()
-            if(todoTitle.isNotEmpty()){
+            if (todoTitle.isNotEmpty()) {
                 val todo = ToDoList(todoTitle)
                 todoAdapter.addTask(todo)
                 binding.etTodoTitle.text.clear()
             }
         }
-        binding.deleteTodo.setOnClickListener{
+        binding.deleteTodo.setOnClickListener {
             todoAdapter.deleteDone()
         }
 

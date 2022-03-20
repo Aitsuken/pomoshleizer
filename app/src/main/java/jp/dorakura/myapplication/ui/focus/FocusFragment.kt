@@ -35,7 +35,7 @@ class FocusFragment : Fragment() {
 
         focusViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
-            materialButton.text=it
+            materialButton.text = it
         })
         return root
     }
